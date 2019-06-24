@@ -1,11 +1,14 @@
 package investimento;
 
-public class Moderado implements Investimento {
+import java.util.Random;
 
+public class Moderado implements Investimento {
+	private Random random = new Random();
+	
 	@Override
 	public double calcula(Double saldo) {
-		boolean random = new java.util.Random().nextDouble() > 0.5;
-		if(random == true) {
+		int chance = random.nextInt(2);
+		if(chance == 1) {
 			return saldo * 0.025;
 		} else {
 			return saldo * 0.007;

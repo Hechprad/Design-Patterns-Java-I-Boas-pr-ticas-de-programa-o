@@ -6,11 +6,13 @@ public class TesteDeInvestimento {
 		
 		Investimento conservador = new Conservador();
 		Investimento moderado = new Moderado();
+		Investimento arrojado = new Arrojado();
 		
 		RealizadorDeInvestimentos investidor = new RealizadorDeInvestimentos();
 		
 		investidor.realizaInvestimento(conta, conservador);
 		investidor.realizaInvestimento(conta, moderado);
+		investidor.realizaInvestimento(conta, arrojado);
 	}
 	
 }
