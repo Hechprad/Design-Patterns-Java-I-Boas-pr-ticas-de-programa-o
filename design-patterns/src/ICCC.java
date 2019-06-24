@@ -8,11 +8,8 @@ public class ICCC implements Imposto {
 		} else if(orcamento.getValor() >= 1000.0 
 				&& orcamento.getValor() <= 3000.0) {
 			return orcamento.getValor() * 0.07;
-		} else if(orcamento.getValor() > 3000.0){
-			return orcamento.getValor() * 0.08 +30.0;
 		} else {
-			return 0;
+			return orcamento.getValor() * 0.08 + 30.0;
 		}
 	}
-
 }
