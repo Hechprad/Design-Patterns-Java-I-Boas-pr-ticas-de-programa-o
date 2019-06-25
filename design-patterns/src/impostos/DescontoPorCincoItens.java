@@ -1,6 +1,8 @@
 package impostos;
 
-public class DescontoPorCincoItens {
+public class DescontoPorCincoItens implements Desconto {
+	
+	@Override
 	public double desconta(Orcamento orcamento) {
 		if (orcamento.getItens().size() > 5) {
 			return orcamento.getValor() * 0.1;
@@ -8,4 +10,5 @@ public class DescontoPorCincoItens {
 			return 0;
 		}
 	}
+	
 }
