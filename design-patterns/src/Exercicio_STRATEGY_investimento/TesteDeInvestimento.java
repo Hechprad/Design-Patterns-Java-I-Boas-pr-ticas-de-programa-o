@@ -1,4 +1,4 @@
-package investimento_utilizando_STRATEGY;
+package Exercicio_STRATEGY_investimento;
 
 public class TesteDeInvestimento {
 	public static void main(String[] args) {
