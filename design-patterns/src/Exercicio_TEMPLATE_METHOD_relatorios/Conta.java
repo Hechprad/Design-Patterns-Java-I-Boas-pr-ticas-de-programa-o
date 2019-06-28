@@ -3,10 +3,10 @@ package Exercicio_TEMPLATE_METHOD_relatorios;
 public class Conta {
 	private String titular;
 	private String agencia;
-	private int numeroDaConta;
+	private String numeroDaConta;
 	private double saldo;
 	
-	public Conta(String titular, String agencia, int numeroDaConta, double saldo) {
+	public Conta(String titular, String agencia, String numeroDaConta, double saldo) {
 		this.titular = titular;
 		this.agencia = agencia;
 		this.numeroDaConta = numeroDaConta;
@@ -18,7 +18,7 @@ public class Conta {
 	public String getAgencia() {
 		return agencia;
 	}
-	public int getNumeroDaConta() {
+	public String getNumeroDaConta() {
 		return numeroDaConta;
 	}
 	public double getSaldo() {

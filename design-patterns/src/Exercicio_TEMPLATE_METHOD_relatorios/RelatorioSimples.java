@@ -6,11 +6,14 @@ public class RelatorioSimples extends Relatorio {
 
 	@Override
 	protected void cabecalho() {
+		System.out.println("---RELATÓRIO SIMPLES------------------------------");
 		System.out.println("Banco Java");
+		System.out.println("--------------------------------------------------");
 	}
 
 	@Override
 	protected void rodape() {
+		System.out.println("--------------------------------------------------");
 		System.out.println("Telefone: 999-555-111");
 	}
 

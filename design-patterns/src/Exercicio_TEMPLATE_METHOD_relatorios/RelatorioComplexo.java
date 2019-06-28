@@ -7,13 +7,16 @@ public class RelatorioComplexo extends Relatorio {
 
 	@Override
 	protected void cabecalho() {
+		System.out.println("---RELATÓRIO COMPLEXO-----------------------------");
 		System.out.println("Banco Java");
 		System.out.println("Rua três, nº 1000"); 
 		System.out.println("Telefone: 999-555-111");
+		System.out.println("--------------------------------------------------");
 	}
 
 	@Override
 	protected void rodape() {
+		System.out.println("--------------------------------------------------");
 		System.out.println("banco_java@email.com.br");
 		System.out.println("Data: " + Calendar.getInstance().getTime());;
 	}
