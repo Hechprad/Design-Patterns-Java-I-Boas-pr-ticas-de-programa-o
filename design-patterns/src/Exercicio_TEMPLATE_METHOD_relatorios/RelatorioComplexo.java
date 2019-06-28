@@ -21,7 +21,10 @@ public class RelatorioComplexo extends Relatorio {
 	@Override
 	protected void corpo(List<Conta> contas) {
 		for (Conta conta : contas) {
-			System.out.println("Titular: " + conta.getTitular() + " - " + "Saldo: " + conta.getSaldo());
+			System.out.println("Titular: " + conta.getTitular() 
+								+ " - " + "Agência: " + conta.getAgencia()
+								+ " - " + "Número da conta: " + conta.getNumeroDaConta()
+								+ " - " + "Saldo: " + conta.getSaldo());
 		}
 	}
 
