@@ -11,8 +11,10 @@ public class TestaRelatorios {
 		contas.add(new Conta("Roberta", "5554-6", "121212-2", 300.0));
 		contas.add(new Conta("Miranda", "5554-7", "121212-3", 500.0));
 		
-		MontaRelatorio relatorio1 = new MontaRelatorio();
-		relatorio1.montaRelatorioSimples(contas);
-		relatorio1.montaRelatorioComplexo(contas);
+		Relatorio  relatorioSimples = new RelatorioSimples();
+		relatorioSimples.imprime(contas);
+		
+		Relatorio  relatorioComplexo = new RelatorioComplexo();
+		relatorioComplexo.imprime(contas);
 	}
 }
