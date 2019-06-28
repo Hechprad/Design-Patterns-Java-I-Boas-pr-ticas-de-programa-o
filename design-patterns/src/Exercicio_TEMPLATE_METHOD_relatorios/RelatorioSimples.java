@@ -6,7 +6,7 @@ public class RelatorioSimples extends Relatorio {
 
 	@Override
 	protected void cabecalho() {
-		System.out.println("Banco do Brasil");
+		System.out.println("Banco Java");
 	}
 
 	@Override
