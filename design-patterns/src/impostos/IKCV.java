@@ -2,6 +2,11 @@ package impostos;
 
 public class IKCV extends TemplateDeImpostoCondicional {
 
+	public IKCV() {}
+	
+	public IKCV(Imposto outroImposto) {
+		super(outroImposto);
+	}
 	private boolean temItemMaiorQue100ReaisNo(Orcamento orcamento) {
 		for(Item item : orcamento.getItens()) {
 			if(item.getValor() > 100.0) {return true;}

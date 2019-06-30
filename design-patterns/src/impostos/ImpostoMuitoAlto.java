@@ -2,8 +2,7 @@ package impostos;
 
 public class ImpostoMuitoAlto extends Imposto {
 
-	public ImpostoMuitoAlto() {
-	}
+	public ImpostoMuitoAlto() {}
 	
 	public ImpostoMuitoAlto(Imposto outroImposto) {
 		super(outroImposto);

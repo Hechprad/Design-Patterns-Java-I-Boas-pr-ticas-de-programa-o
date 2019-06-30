@@ -2,8 +2,7 @@ package impostos;
 
 public class ICMS extends Imposto {
 
-	public ICMS() {
-	}
+	public ICMS() {}
 	
 	public ICMS(Imposto outroImposto) {
 		super(outroImposto);

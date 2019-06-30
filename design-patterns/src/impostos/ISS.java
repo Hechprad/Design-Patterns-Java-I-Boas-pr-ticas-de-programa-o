@@ -2,8 +2,7 @@ package impostos;
 
 public class ISS extends Imposto{
 
-	public ISS() {
-	}
+	public ISS() {}
 	
 	public ISS(Imposto outroImposto) {
 		super(outroImposto);

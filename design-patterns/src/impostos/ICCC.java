@@ -2,8 +2,7 @@ package impostos;
 
 public class ICCC extends Imposto {
 
-	public ICCC() {
-	}
+	public ICCC() {}
 	
 	public ICCC(Imposto outroImposto) {
 		super(outroImposto);

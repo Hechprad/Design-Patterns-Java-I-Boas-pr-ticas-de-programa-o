@@ -1,6 +1,13 @@
 package impostos;
 
 public abstract class TemplateDeImpostoCondicional extends Imposto {
+	
+	public TemplateDeImpostoCondicional() {
+	}
+	
+	public TemplateDeImpostoCondicional(Imposto outroImposto) {
+		super(outroImposto);
+	}
 	@Override
 	public final double calcula(Orcamento orcamento) {
 		if(deveUsarMaximaTaxacao(orcamento)) {

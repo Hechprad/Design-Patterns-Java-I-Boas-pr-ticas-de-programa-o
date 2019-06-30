@@ -5,8 +5,7 @@ public abstract class Imposto {
 	protected Imposto outroImposto;
 	
 	//construtor vazio caso não tenha outro imposto
-	public Imposto() {
-	}
+	public Imposto() {}
 	
 	//construtor caso tenha outro imposto
 	public Imposto(Imposto outroImposto) {
