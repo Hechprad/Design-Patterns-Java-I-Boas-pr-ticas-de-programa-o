@@ -17,7 +17,7 @@ public class TestaFiltroDeContas {
 		Conta c4 = new Conta("Luiz", 70);
 		contas.add(c4);
 		
-		Filtro filtraContas = new FiltraSaldoMenorQue100Reais(new FiltraSaldoMaiorQue500MilReais());
+		Filtro filtraContas = new FiltroSaldoMenorQue100Reais(new FiltroSaldoMaiorQue500MilReais(new FiltroMesmoMes()));
 		
 		List<Conta> contasFiltradas = filtraContas.filtra(contas);
 		

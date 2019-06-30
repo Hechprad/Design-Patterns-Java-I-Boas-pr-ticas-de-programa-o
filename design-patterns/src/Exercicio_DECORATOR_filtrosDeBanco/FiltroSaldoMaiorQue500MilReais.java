@@ -3,11 +3,11 @@ package Exercicio_DECORATOR_filtrosDeBanco;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FiltraSaldoMenorQue100Reais extends Filtro {
+public class FiltroSaldoMaiorQue500MilReais extends Filtro {
+
+	public FiltroSaldoMaiorQue500MilReais() {}
 	
-	public FiltraSaldoMenorQue100Reais() {}
-	
-	public FiltraSaldoMenorQue100Reais(Filtro outroFiltro) {
+	public FiltroSaldoMaiorQue500MilReais(Filtro outroFiltro) {
 		super(outroFiltro);
 	}
 	@Override
@@ -15,7 +15,7 @@ public class FiltraSaldoMenorQue100Reais extends Filtro {
 		List<Conta> contasFiltradas = new ArrayList<Conta>();
 		
 		for (Conta conta : contas) {
-			if(conta.getSaldo() < 100.0) {
+			if(conta.getSaldo() > 500000.0) {
 				contasFiltradas.add(conta);
 			}
 		}
@@ -23,5 +23,5 @@ public class FiltraSaldoMenorQue100Reais extends Filtro {
 		contasFiltradas.addAll(proximoFiltro(contas));
 		return contasFiltradas;
 	}
-
+	
 }
