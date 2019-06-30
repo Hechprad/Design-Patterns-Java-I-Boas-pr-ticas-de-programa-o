@@ -2,8 +2,7 @@ package impostos;
 
 public class TesteDeImpostosComplexos {
 	public static void main(String[] args) {
-		Imposto iss = new ISS();
-		Imposto issComIcms = new ISS(new ICMS());
+		Imposto iss = new ISS(new ICMS(new ICPP()));
 		
 		Orcamento orcamento = new Orcamento(500);
 		
