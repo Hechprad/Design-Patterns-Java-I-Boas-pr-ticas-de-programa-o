@@ -4,7 +4,7 @@ public class TesteDaNotaFiscal {
 
 	public static void main(String[] args) {
 
-		CriadorDeNotaFiscal criador = new CriadorDeNotaFiscal();
+		NotaFiscalBuilder criador = new NotaFiscalBuilder();
 		criador.paraEmpresa("Caelum Ensino e Inovação");
 		criador.comCnpj("99.888.777/0001-33");
 		criador.comItem(new ItemDaNota("item 1", 200.0));
