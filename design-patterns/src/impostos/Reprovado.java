@@ -1,0 +1,11 @@
+package impostos;
+
+public class Reprovado implements EstadoDeUmOrcamento {
+
+	@Override
+	public void aplicaDescontoExtra(Orcamento orcamento) {
+		throw new RuntimeException("Orçamentos reprovados não recebem desconto extra!");
+		
+	}
+
+}

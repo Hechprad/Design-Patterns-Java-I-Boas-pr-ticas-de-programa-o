@@ -1,0 +1,8 @@
+package impostos;
+
+public class Aprovado implements EstadoDeUmOrcamento {
+	
+	public void aplicaDescontoExtra(Orcamento orcamento) {
+		orcamento.valor -= orcamento.valor * 0.02;
+	}
+}
