@@ -9,13 +9,12 @@ public class Orcamento {
 	protected double valor;
 	private final List<Item> itens;
 	
-	private int estadoAtual;
-	private static final int EM_APROVACAO = 1;
-	private static final int APROVADO = 2;
-
+	protected EstadoDeUmOrcamento estadoAtual;
+	
 	public Orcamento(double valor) {
 		this.valor = valor;
 		itens = new ArrayList<Item>();
+		estadoAtual = new EmAprovacao();
 	}
 
 	public double getValor() {
@@ -31,9 +30,18 @@ public class Orcamento {
 	}
 
 	public void aplicaDescontoExtra() {
-		if(estadoAtual == EM_APROVACAO) valor = valor - (valor * 0.05);
-		else if(estadoAtual == APROVADO) valor = valor - (valor * 0.02);
-		else throw new RuntimeException("Somente orcamento em aprovação ou aprovados recebem desconto extra");
+		estadoAtual.aplicaDescontoExtra(this);
 	}
 
+	public void aprova() {
+		estadoAtual.aprova(this);
+	}
+	
+	public void reprova() {
+		estadoAtual.aprova(this);
+	}
+	
+	public void finaliza() {
+		estadoAtual.aprova(this);
+	}
 }
