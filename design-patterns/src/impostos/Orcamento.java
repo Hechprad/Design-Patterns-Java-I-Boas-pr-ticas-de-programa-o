@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Orcamento {
 
-	private double valor;
+	protected double valor;
 	private final List<Item> itens;
 	
 	private int estadoAtual;
@@ -33,7 +33,7 @@ public class Orcamento {
 	public void aplicaDescontoExtra() {
 		if(estadoAtual == EM_APROVACAO) valor = valor - (valor * 0.05);
 		else if(estadoAtual == APROVADO) valor = valor - (valor * 0.02);
-		else throw new RuntimeException("Somente orcamento em aprovação ou aprovados recebem desconto extra")
+		else throw new RuntimeException("Somente orcamento em aprovação ou aprovados recebem desconto extra");
 	}
 
 }
