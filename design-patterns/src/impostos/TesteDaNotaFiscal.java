@@ -10,6 +10,12 @@ public class TesteDaNotaFiscal {
 		criador.comItem(new ItemDaNota("item 1", 200.0));
 		criador.comItem(new ItemDaNota("item 2", 300.0));
 		criador.comItem(new ItemDaNota("item 3", 400.0));
+		criador.comObservacoes("obs qualquer.");
+		criador.naDataAtual();
+		
+		NotaFiscal nf = criador.constroi();
+		
+		System.out.println(nf.getRazaoSocial());
 
 	}
 
