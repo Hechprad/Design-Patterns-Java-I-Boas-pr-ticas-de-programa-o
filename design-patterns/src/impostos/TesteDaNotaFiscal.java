@@ -1,5 +1,7 @@
 package impostos;
 
+import java.util.Calendar;
+
 public class TesteDaNotaFiscal {
 
 	public static void main(String[] args) {
@@ -16,7 +18,7 @@ public class TesteDaNotaFiscal {
 		.comItem(new ItemDaNota("item 2", 300.0))
 		.comItem(new ItemDaNota("item 3", 400.0))
 		.comObservacoes("obs qualquer.")
-		.naDataAtual();
+		.naData(Calendar.getInstance());
 		
 		NotaFiscal nf = builder.constroi();
 		
