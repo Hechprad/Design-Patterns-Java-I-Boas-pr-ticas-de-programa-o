@@ -1,6 +1,8 @@
 package impostos;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class TesteDaNotaFiscal {
 
@@ -10,7 +12,11 @@ public class TesteDaNotaFiscal {
 		itemBuilder.comNome("ITEM 1").comValor(500.0);
 		ItemDaNota item = itemBuilder.constroi();
 		
-		NotaFiscalBuilder builder = new NotaFiscalBuilder();
+		List<AcaoAposGerarNota> lista = new ArrayList<AcaoAposGerarNota>();
+		lista.add(new EnviadorDeEmail());
+		lista.add(new EnviadorDeSms());
+		
+		NotaFiscalBuilder builder = new NotaFiscalBuilder(lista);
 		builder.paraEmpresa("Caelum Ensino e Inovação")
 		.comCnpj("99.888.777/0001-33")
 		.com(item)

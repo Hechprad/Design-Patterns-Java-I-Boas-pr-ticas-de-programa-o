@@ -16,13 +16,9 @@ public class NotaFiscalBuilder {
 	
 	private List<AcaoAposGerarNota> todasAcoesASeremExecutadas;
 
-	public NotaFiscalBuilder() {
+	public NotaFiscalBuilder(List<AcaoAposGerarNota> lista) {
 		this.data = Calendar.getInstance();
-		this.todasAcoesASeremExecutadas = new ArrayList<AcaoAposGerarNota>();
-	}
-	
-	public void adicionaAcao(AcaoAposGerarNota acao) {
-		this.todasAcoesASeremExecutadas.add(acao);
+		this.todasAcoesASeremExecutadas = lista;
 	}
 	
 	public NotaFiscalBuilder paraEmpresa(String razaoSocial) {

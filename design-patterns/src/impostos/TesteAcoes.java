@@ -1,15 +1,21 @@
 package impostos;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TesteAcoes {
 
 	public static void main(String[] args) {
-		NotaFiscalBuilder builder = new NotaFiscalBuilder();
-		builder.adicionaAcao(new EnviadorDeEmail());
-		builder.adicionaAcao(new NotaFiscalDao());
-		builder.adicionaAcao(new EnviadorDeSms());
-		builder.adicionaAcao(new Impressora());
-		builder.adicionaAcao(new Multiplicador(5));
-
+		
+		List<AcaoAposGerarNota> lista = new ArrayList<AcaoAposGerarNota>();
+		lista.add(new EnviadorDeEmail());
+		lista.add(new NotaFiscalDao());
+		lista.add(new EnviadorDeSms());
+		lista.add(new Impressora());
+		lista.add(new Multiplicador(5));
+		
+		NotaFiscalBuilder builder = new NotaFiscalBuilder(lista);
+		
 		NotaFiscal nf = builder.paraEmpresa("Caelum")
 				.comCnpj("123")
 				.com(new ItemDaNota("nome 1", 100))
