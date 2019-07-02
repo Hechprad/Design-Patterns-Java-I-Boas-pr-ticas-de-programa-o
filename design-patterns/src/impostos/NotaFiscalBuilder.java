@@ -36,6 +36,10 @@ public class NotaFiscalBuilder {
 		return this;
 	}
 
+	public NotaFiscalBuilder() {
+		this.data = Calendar.getInstance();
+	}
+	
 	public NotaFiscalBuilder naData(Calendar novaData) {
 		this.data = novaData;
 		return this;
