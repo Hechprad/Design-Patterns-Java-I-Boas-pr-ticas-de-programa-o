@@ -8,6 +8,7 @@ public class TesteAcoes {
 		builder.adicionaAcao(new NotaFiscalDao());
 		builder.adicionaAcao(new EnviadorDeSms());
 		builder.adicionaAcao(new Impressora());
+		builder.adicionaAcao(new Multiplicador(5));
 
 		NotaFiscal nf = builder.paraEmpresa("Caelum")
 				.comCnpj("123")
