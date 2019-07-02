@@ -13,10 +13,10 @@ public class TesteDaNotaFiscal {
 		NotaFiscalBuilder builder = new NotaFiscalBuilder();
 		builder.paraEmpresa("Caelum Ensino e Inovação")
 		.comCnpj("99.888.777/0001-33")
-		.comItem(item)
-		.comItem(new ItemDaNota("item 1", 200.0))
-		.comItem(new ItemDaNota("item 2", 300.0))
-		.comItem(new ItemDaNota("item 3", 400.0))
+		.com(item)
+		.com(new ItemDaNota("item 1", 200.0))
+		.com(new ItemDaNota("item 2", 300.0))
+		.com(new ItemDaNota("item 3", 400.0))
 		.comObservacoes("obs qualquer.")
 		.naData(Calendar.getInstance());
 		

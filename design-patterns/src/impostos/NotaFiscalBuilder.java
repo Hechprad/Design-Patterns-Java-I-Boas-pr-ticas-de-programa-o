@@ -24,7 +24,7 @@ public class NotaFiscalBuilder {
 		return this;
 	}
 
-	public NotaFiscalBuilder comItem(ItemDaNota item) {
+	public NotaFiscalBuilder com(ItemDaNota item) {
 		todosItens.add(item);
 		valorBruto += item.getValor();
 		impostos += item.getValor() * 0.05;
@@ -46,6 +46,14 @@ public class NotaFiscalBuilder {
 	}
 	
 	public NotaFiscal constroi() {
-		return new NotaFiscal(razaoSocial, cnpj, data, valorBruto, impostos, todosItens, observacoes);
+		NotaFiscal nf = new NotaFiscal(razaoSocial, cnpj, data, valorBruto, impostos, todosItens, observacoes);
+		
+		new EnviadorDeEmail().enviaEmail(nf);
+		new NotaFiscalDao().salvaNoBanco(nf);
+		new EnviadorDeSms().enviaPorSms(nf);
+		new Impressora().imprime(nf);
+		
+		return nf;
 	}
+
 }
